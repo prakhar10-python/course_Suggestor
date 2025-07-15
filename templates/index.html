@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Productivity App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+  <div class="container">
+    <h1>🗂️ My Productivity System</h1>
+
+    <!-- To-Do Section -->
+    <section>
+      <h2>✅ To-Do List</h2>
+      <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="Task description" required />
+        <input type="date" id="dueDate" required />
+        <button type="submit">Add Task</button>
+      </form>
+      <ul id="taskList"></ul>
+    </section>
+
+    <button id="showCoursesBtn">Show Courses</button>
+    <section id="coursesSection" style="display:none; margin-top:20px;">
+      <h2>🎓 Suggested Udemy Courses</h2>
+      <div id="coursesList"></div>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
